@@ -114,7 +114,7 @@ jobs:
 
   deploy:
     needs: [train, test, black, build, push-image]
-    runs-on: ec2_runner
+    runs-on: self-hosted
     steps:
     - name: Pull Docker Image
       env: 
