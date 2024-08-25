@@ -51,7 +51,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - name: black the files
+    - name: Install dependencies
+      run: pip install black
+    - name: black the setup file
       run:  black .
 
   build:
